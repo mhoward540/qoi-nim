@@ -17,7 +17,7 @@ proc convert*(fname_in: string, fname_out: string) =
 
   if fname_in.endsWith(".png") and fname_out.endsWith(".qoi"):
     let s = readFile(fname_in)
-    let png = decodePngRaw(s)
+    let png = decodePng(s)
     let desc = QOIDesc(width: png.width.uint32, height: png.height.uint32, channels: png.channels.uint8, colorspace: 0'u8) # TODO colorspace
 
     var imgBytes = newSeq[uint8](png.width * png.height * png.channels)
