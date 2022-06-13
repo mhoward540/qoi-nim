@@ -14,5 +14,5 @@ bin           = @["qoi_nim"]
 requires "nim >= 1.6.2"
 
 # just for conv.nim
-requires "pixie >= 3.1.2"
+requires "pixie >= 4.3.0"
 requires "chroma >= 0.2.5"
